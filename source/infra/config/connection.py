@@ -28,6 +28,7 @@ class DBConnectionHandler:
         if self.session:
             try:
                 self.session.close()
+                self.session = None
             except Exception as e:
                 print(f"Erro ao fechar a sessão: {e}")
 
